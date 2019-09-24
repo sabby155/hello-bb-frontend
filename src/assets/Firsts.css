@@ -1,0 +1,196 @@
+/* .button-group button{
+    padding: 60px;
+} */
+
+.edit-firsts-caption-form {
+    text-align: center;
+    padding: 10px;
+    position: absolute;
+    margin-top: 80px;
+    margin-left: 230px;
+}
+#firsts-caption {
+    height: 100px;
+    width: 300px;
+    max-width: 350px;
+    outline: none;
+    resize: none;
+}
+#edit-milestone-caption-btn {
+    position: absolute;
+    /* float:right; */
+    margin-left: 14em;
+    margin-top: -6em;
+}
+
+.milestones-go-back-btn {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    cursor: pointer;
+}
+
+.first-fave-pic {
+    position:absolute;
+    border-radius: 50%;
+    margin-left: -1em;
+    margin-top: 3.5em;
+  
+}
+
+.garland {
+    position: absolute;
+    margin: 0 auto;
+    display: block;
+    clear: both;
+    margin-left: 17em;
+    margin-top: -12.5em;
+
+}
+
+.bear {
+    position: absolute;
+    margin-top: .1em;
+}
+
+.scissors {
+    position: absolute;
+    margin-top: 2em;
+    margin-left: 8em;
+    transform: rotate(30deg);
+    z-index: 2;
+    opacity: .7;
+}
+
+
+
+
+.first-fave-card h4 {
+    position: absolute;
+    margin-left: 15.5em;
+    padding-top: 2em;
+
+}
+
+/* .button-group {
+    text-align: center;
+} */
+
+.first-fave-card {
+    /* position: relative; */
+    /* display: block; */
+    border: 1px dashed;
+    width: 650px;
+    height: 270px;
+    margin-left: 7em;
+    margin-top: 3em;
+    /* padding: 30px; */
+}
+
+.main-container {
+    margin-top: 55px;
+}
+
+.card-content {
+    position: absolute;
+    width: 40%;
+    margin-top: 20px; 
+    margin-left: 205px;
+}
+
+
+
+.button-item {
+
+    /* background-size: cover; */
+    background-position: center center;
+    /* background-color: whitesmoke; */
+    border: .01px;
+    outline: .01px solid lightgray;
+    text-transform: uppercase;
+    font-size: .8em;
+
+
+  
+}
+
+button:hover{
+
+    color: white;
+    background-color: teal;
+    cursor: pointer;
+    transition: .3s ease-in; 
+ }
+
+ button:focus {
+
+     color: white;
+     background-color: teal;
+     cursor: pointer;
+     transition: .3s ease-in;
+ }
+
+
+
+.caption {
+    position: absolute;
+    max-width: 280px;
+    top: 6em;
+    left: 2em;
+}
+
+.date {
+   position: absolute;
+   top: 13em;
+   left: 2em;
+   color: gray;
+}
+
+
+
+ .square-grid {
+    --content-width: 270px;
+
+
+    --gutter: 0px;
+
+    --columns: 3;
+
+
+    --row-size: calc((var(--content-width) - (var(--gutter) * (var(--columns) - 1))) / var(--columns));
+
+    display: grid;
+    /* margin-left: 4em; */
+    margin-top: 3em;
+
+    width: 100%;
+    height: 100%; 
+    max-width: var(--content-width); 
+
+    grid-template-columns: repeat(var(--columns), 1fr);
+    grid-auto-rows: var(--row-size);
+
+    grid-column-gap: var(--gutter);
+    grid-row-gap: var(--gutter); 
+
+} 
+
+
+
+ @media (min-width: 450px) {
+    .square-grid {
+        --columns: 3;
+    }
+}
+
+@media (min-width: 750px) {
+    .square-grid {
+        --columns: 3;
+    }
+}
+
+@media (min-width: 1200px) {
+    .square-grid {
+        --columns: 3;
+    }
+} 

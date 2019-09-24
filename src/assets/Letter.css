@@ -1,0 +1,231 @@
+  /* * {
+      box-sizing: border-box;
+  }
+
+  .postcard {
+      width: 600px;
+      height: 320px;
+      background-color: #f7f7f7;
+      margin: 0 auto;
+      border-radius: 2%;
+      display: flex;
+      justify-content: space-between;
+      padding: 3em;
+      box-shadow: .8em .8em 15px rgba(0, 0, 0, .3);
+      -ms-transform: rotate(2.5deg);
+      -webkit-transform: rotate(2.5deg);
+      transform: rotate(2.5deg);
+      -moz-transition: all .5s ease;
+      -webkit-transition: all .5s ease;
+      -o-transition: all .5s ease;
+      transition: all .5s ease;
+  }
+
+
+
+  p {
+      display: inline;
+      font-size: 1em;
+  }
+
+  .postcard:hover,
+  .postcard:active,
+  .postcard:focus {
+      -ms-transform: rotate(0deg);
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+      -moz-transition: all .5s ease;
+      -webkit-transition: all .5s ease;
+      -o-transition: all .5s ease;
+      transition: all .5s ease;
+
+
+  }
+
+  .postcard input,
+  .postcard textarea {
+      border: none;
+      border-radius: 4%;
+      height: 1.9em;
+      padding: .7em;
+      font-size: 1em;
+      width: 350px;
+      height: 150px;
+      outline: none;
+
+  }
+
+
+
+  .mail_stamp {
+      width: 130px;
+      float: right;
+  }
+
+
+  .postcard textarea {
+      overflow: auto;
+      resize: none;
+      height: 10em;
+      width: 22em;
+      margin-top: .5em;
+      margin-bottom: 1em;
+
+  }
+
+  .push {
+      margin-bottom: 1em;
+      margin-top: .5em;
+  } */
+
+  
+
+
+
+
+
+
+
+  * {
+    box-sizing: border-box;
+  }
+
+  #add-note-button {
+    position: absolute;
+    padding: 1em;
+    margin-top: -9em;
+    margin-left: 30em;
+  }
+
+  .stamp {
+    position: static;
+    /* float: right; */
+    margin-top: -19em;
+    margin-left: 24em;
+    opacity: .8;
+    /* transform: rotate(2deg); */
+  }
+  .post-stample {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    right: 12px;
+    margin-right: 25px;
+    margin-top: -3.5em;
+    border: 1px solid black;
+    opacity: .1;
+  }
+
+  .greeting {
+    font-family:'La Belle Aurore';
+    font-size: 1.2em;
+  }
+
+
+.card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2; 
+  width: 565px;
+  height: 320px;
+  /* background-color: rgb(253, 248, 248); */
+  /* margin: 0 auto; */
+  border-radius: 2%;
+  /* display: block; */
+
+  /* display: flex;  */
+  /* justify-content: space-between; */
+  /* padding: 3em;  */
+  
+  background: rgb(253, 248, 248);
+  border-radius: 30px;
+  padding: 30px;
+  box-shadow: .5em .5em 15px rgba(68, 68, 68, 0.3);
+  transform: translateY(0) rotate(4deg) translateX(25px) scale(1);
+  transform-origin: 0 0;
+  transition: transform 0.6s cubic-bezier(.8,.2,.1,0.8) 0.1s, background 0.4s linear;
+  cursor: pointer;
+  user-select: none;
+
+  
+  
+}
+
+p {
+    display: inline;
+    font-size: 1em;
+    
+}
+
+ .card .signature {
+    position: absolute;
+    margin-left: 370px;
+    margin-top: -3em;
+    text-align: center;
+    font-size: 1.1em;
+    font-family:'La Belle Aurore';
+
+    /* margin-top: -50px; */
+  }
+
+  /* .card input, */
+  .card #content {
+    border: none;
+      /* border: 1px solid teal; */
+      /* padding: .7em; */
+      font-size: 1.3em;
+      width: 20em;
+      height: 9em;
+      outline: none;
+      font-family:'La Belle Aurore';
+      overflow: auto;
+      resize: none;
+      /* margin-top: .5em; */
+      margin-bottom: 1em;
+      background: rgb(253, 248, 248);
+
+  }
+
+  .card #content:focus-visible {
+      border: 1px solid teal;
+  }
+
+
+
+.card--next { 
+  z-index: 5; 
+  transform: translateY(-25px) rotate(4deg) translateX(25px) scale(1);
+  background: rgb(253, 248, 248);
+}
+
+.card--out {
+  animation: card-out 0.6s cubic-bezier(.8,.2,.1,0.8);
+  transform: translateY(-50px) rotate(8deg) translateX(55px) scale(0.95);
+  z-index: 1;
+  background: rgb(253, 248, 248);
+}
+
+.card--out #content {
+    background: rgb(253, 248, 248);
+}
+
+@keyframes card-out {
+  0% { z-index: 20; transform: translateY(0px) rotate(-4deg); }
+  50% { transform: translateX(-120%) rotate(-5deg) translateY(-40px); }
+  80% { z-index: 1; }
+  100% { transform: translateX(-50px) rotate(8deg) translateY(55px) scale(0.95); }
+}
+
+.card--current {
+  cursor: auto;
+  user-select: auto;
+  /* position: relative; removing this fixed bird movement issue.*/
+  z-index: 100;
+  opacity: 1;
+  background: rgb(253, 248, 248);
+  transform: rotate(-1deg) translateX(0%) scale(1);
+}
+
+ /* html, body { height: 100%; }
+ body { padding: 40px; background: white; }  */

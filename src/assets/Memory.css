@@ -1,0 +1,106 @@
+.border {
+        border: 1px dashed;
+        /* text-align: center; */
+
+}
+
+
+
+h3 {
+    text-align: center;
+}
+
+.delete-btn {
+    cursor: pointer;
+}
+
+figure.image-effect {
+    background: #fff;
+    text-align: center;
+}
+
+
+figure.image-effect img {
+    opacity: 0.95;
+    -webkit-transition: -webkit-transform 0.35s;
+    transition: transform 0.35s;
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+}
+
+
+figure.image-effect:hover img {
+    -webkit-transform: scale3d(0.95, 0.95, 1);
+    transform: scale3d(0.95, 0.95, 1);
+}
+
+figure.image-effect span {
+    opacity: 0;
+    -webkit-transition: -webkit-transform 0.35s;
+    transition: transform 0.35s;
+    -webkit-transform: translate3d(0, 20px, 0);
+    transform: translate3d(0, 20px, 0);
+}
+
+figure.image-effect p {
+    opacity: 0;
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    -webkit-transform: perspective(1000px) rotate3d(1, 0, 0, 90deg);
+    transform: perspective(1000px) rotate3d(1, 0, 0, 90deg);
+    -webkit-transform-origin: 50% 0%;
+    transform-origin: 50% 0%;
+}
+
+figure.image-effect:hover span {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+figure.image-effect:hover p {
+    opacity: 1;
+    -webkit-transform: perspective(1000px) rotate3d(1, 0, 0, 0);
+    transform: perspective(1000px) rotate3d(1, 0, 0, 0);
+}
+
+
+.border {
+    position: relative;
+}
+
+/* .track:hover .img-description {
+    visibility: visible;
+    opacity: 1;
+} */
+
+
+.image-description {
+    position: absolute;
+    top: 0px;
+    bottom: 3px;
+    left: 0;
+    right: 0;
+    background: #fff;
+    color: #fff;
+    
+    /* visibility: hidden; */
+    padding-top: 10px;
+    opacity: 1;
+    
+    /* transition effect. not necessary */
+    /* transition: opacity .2s, visibility .2s; */
+}
+
+.go-back-btn {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    cursor: pointer;
+}
+
+
+#edit-image-form {
+    margin-top: -3em;
+    padding: 3em;
+}

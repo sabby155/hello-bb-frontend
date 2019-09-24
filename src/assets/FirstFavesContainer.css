@@ -1,0 +1,24 @@
+h3 {
+    text-align: center;
+}
+.first-faves-container {
+    position: relative;
+    padding: 30px;
+}
+
+.button-container {
+    /* position: absolute; */
+    /* text-align: center; */
+    margin-left: 25em;
+    /* margin-top: -2em; */
+
+}
+
+.chevron {
+    position: absolute;
+    margin-top: 0em;
+    margin-left: 4em;
+}
+.first-fave-button {
+    width: 200px;
+}

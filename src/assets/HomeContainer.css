@@ -1,0 +1,21 @@
+.site {
+      display: flex;
+      min-height: 100vh;
+      flex-direction: column;
+}
+
+.site-content {
+    flex:1;
+    margin-bottom: 50px;
+}
+
+
+
+.footer {
+    text-align: center;
+    position: absolute;
+    /* margin-top: -70px;  */
+    margin-bottom: 0;
+    height: 40px;
+    clear: both;
+}

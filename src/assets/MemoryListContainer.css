@@ -1,0 +1,22 @@
+.memory-list h3 {
+    text-align: center;
+}
+
+.memory-list {
+    position: relative;
+}
+
+.stack-grid {
+    padding-top: 50px;
+}
+
+#add-memory-button {
+    position: absolute;
+    right: 87px;
+    top: 0px;
+
+ }
+
+ .overlay {
+        background: #fff;
+ }
