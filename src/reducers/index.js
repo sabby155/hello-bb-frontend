@@ -88,7 +88,12 @@ const reducer = (state=defaultState, action) => {
         case "SAVE_MEMORIES": 
             return {
                 ...state,
-                memories: action.payload
+                memories: action.payload.sort(function (a, b) {
+                    a = a.created_at.split('/').reverse().join('');
+                    b = b.created_at.split('/').reverse().join('');
+                    return b > a ? 1 : a > b ? -1 : 0;
+                    // return a.localeCompare(b);         
+                })
             }
 
         case "ADD_MEMORY_TO_MEMORIES": 

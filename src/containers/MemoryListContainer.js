@@ -19,8 +19,8 @@ class MemoryListContainer extends React.Component {
             })
             .then(res =>res.json())
             .then(data => {
-                console.log('memory list container',data.posts)
-                this.props.saveMemories(data.posts)
+                console.log('memory list container',data)
+                this.props.saveMemories(data)
             })  
         }
     }
