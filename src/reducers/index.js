@@ -20,7 +20,7 @@ const reducer = (state=defaultState, action) => {
 
         case "SET_CURRENT_USER": 
             return {...state, currentUser: action.payload}
-
+        
         case "ADD_BABY_TO_USER":
             let babies = [...state.currentUser.babies, action.payload]
             return {...state, currentUser: {...state.currentUser, babies}}   

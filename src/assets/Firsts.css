@@ -16,6 +16,8 @@
     outline: none;
     resize: none;
 }
+
+
 #edit-milestone-caption-btn {
     position: absolute;
     /* float:right; */
@@ -134,9 +136,14 @@ button:hover{
 
 .caption {
     position: absolute;
+    padding: 5px;
     max-width: 280px;
     top: 6em;
     left: 2em;
+}
+
+.caption:hover {
+    outline: 1px solid teal;
 }
 
 .date {

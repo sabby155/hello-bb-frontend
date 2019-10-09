@@ -1,5 +1,5 @@
 import React from 'react'
-import {Container, Image, Button, Icon, Form, TextArea, Input } from 'semantic-ui-react'
+import {Container, Image, Button, Icon, Form} from 'semantic-ui-react'
 import { connect } from 'react-redux'
 import '../assets/Letter.css'
 import stamp from '../assets/postage-stamp.png'

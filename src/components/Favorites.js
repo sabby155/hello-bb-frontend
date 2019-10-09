@@ -5,6 +5,7 @@ import { connect } from 'react-redux'
 import bear from '../assets/bear-and-stars.png'
 import garland from '../assets/096.png'
 import scissors from '../assets/scissors.svg'
+import PeekABoo from '../assets/peek-a-boo.png'
 
 
 
@@ -13,7 +14,7 @@ class Favorites extends React.Component {
 
     state = {
         caption: "Click to view or document a memorable favorite or a first.",
-        link: "https://images.unsplash.com/photo-1558542086-b116634c8dd2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80",
+        link: PeekABoo,
         date: "04-07-1988",
         name: "Select a Favorite <3",
         isClicked: false,
@@ -37,8 +38,8 @@ class Favorites extends React.Component {
         if (this.props.babyMilestones) {
             this.setState({
                 caption: this.props.babyMilestones[9].caption,
-                link: this.props.babyMilestones[9].link,
-                date: this.props.babyMilestones[9].date,
+                link: this.state.link,
+                date: this.props.babyMilestones[9].updated_at.split("").slice(0,10).join(""),
                 name: "Favorite Food"
             })
         
@@ -50,8 +51,8 @@ class Favorites extends React.Component {
         if (this.props.babyMilestones) {
             this.setState({
                 caption: this.props.babyMilestones[14].caption,
-                link: this.props.babyMilestones[14].link,
-                date: this.props.babyMilestones[14].date,
+                link: this.state.link,
+                date: this.props.babyMilestones[14].updated_at.split("").slice(0,10).join(""),
                 name: "Favorite Song"
             })
         
@@ -63,8 +64,8 @@ class Favorites extends React.Component {
         if (this.props.babyMilestones) {
             this.setState({
                 caption: this.props.babyMilestones[10].caption,
-                link: this.props.babyMilestones[10].link,
-                date: this.props.babyMilestones[10].date,
+                link: this.state.link,
+                date: this.props.babyMilestones[10].updated_at.split("").slice(0,10).join(""),
                 name: "Favorite Toy"
             })
             this.props.setSelectedMilestone(this.props.babyMilestones[10])
@@ -75,8 +76,8 @@ class Favorites extends React.Component {
         if (this.props.babyMilestones) {
             this.setState({
                 caption: this.props.babyMilestones[12].caption,
-                link: this.props.babyMilestones[12].link,
-                date: this.props.babyMilestones[12].date,
+                link: this.state.link,
+                date: this.props.babyMilestones[12].updated_at.split("").slice(0,10).join(""),
                 name: "Favorite Book"
             })
         
@@ -88,8 +89,8 @@ class Favorites extends React.Component {
         if (this.props.babyMilestones) {
             this.setState({
                 caption: this.props.babyMilestones[15].caption,
-                link: this.props.babyMilestones[15].link,
-                date: this.props.babyMilestones[15].date,
+                link: this.state.link,
+                date: this.props.babyMilestones[15].updated_at.split("").slice(0,10).join(""),
                 name: "Favorite Blanket"
             })
         
@@ -101,8 +102,8 @@ class Favorites extends React.Component {
         if (this.props.babyMilestones) {
             this.setState({
                 caption: this.props.babyMilestones[16].caption,
-                link: this.props.babyMilestones[16].link,
-                date: this.props.babyMilestones[16].date,
+                link: this.state.link,
+                date: this.props.babyMilestones[16].updated_at.split("").slice(0,10).join(""),
                 name: "Favorite Outfit"
             })
         
@@ -114,8 +115,8 @@ class Favorites extends React.Component {
         if (this.props.babyMilestones) {
             this.setState({
                 caption: this.props.babyMilestones[17].caption,
-                link: this.props.babyMilestones[17].link,
-                date: this.props.babyMilestones[17].date,
+                link: this.state.link,
+                date: this.props.babyMilestones[17].updated_at.split("").slice(0,10).join(""),
                 name: "Favorite Activity"
             })
         
@@ -127,8 +128,8 @@ class Favorites extends React.Component {
         if (this.props.babyMilestones) {
             this.setState({
                 caption: this.props.babyMilestones[11].caption,
-                link: this.props.babyMilestones[11].link,
-                date: this.props.babyMilestones[11].date,
+                link: this.state.link,
+                date: this.props.babyMilestones[11].updated_at.split("").slice(0,10).join(""),
                 name: "Favorite Game"
             })
         
@@ -140,8 +141,8 @@ class Favorites extends React.Component {
         if (this.props.babyMilestones) {
             this.setState({
                 caption: this.props.babyMilestones[13].caption,
-                link: this.props.babyMilestones[13].link,
-                date: this.props.babyMilestones[13].date,
+                link: this.state.link,
+                date: this.props.babyMilestones[13].updated_at.split("").slice(0,10).join(""),
                 name: "Favorite Show"
             })
         

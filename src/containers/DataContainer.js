@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { Grid, Image, Container, Divider, Responsive, Segment } from 'semantic-ui-react'
+import { Grid, Image, Container, Icon, Responsive, Segment } from 'semantic-ui-react'
 import '../assets/DataContainer.css'
 import crown from '../assets/crown.png'
 import moon from '../assets/moon-phase.png'
@@ -72,7 +72,7 @@ class DataContainer extends React.Component {
                 <Grid.Row className="row">
                 <Grid.Column>
                     <Image src={moon} width="90" height="95" className="moon"/>
-                    < p className = 'text-moon'> When you were born, the moon 's phase was a <strong>{this.state.moon.match(/was(.*)/)[1]}</strong></p>
+                    < p className = 'text-moon'>When you were born, the moon's phase was a <strong>{this.state.moon.match(/was(.*)/)[1]}</strong></p>
                 </Grid.Column>
                 <Grid.Column>
                     <Image src={gas} width="60" height="60"  className="gas"/>
@@ -102,7 +102,16 @@ class DataContainer extends React.Component {
             </Container>
              </Responsive>
             </Segment.Group>
-            :null}
+            :
+            <div>
+                <p className="directions-text">Please select a profile you'd like to see from the "Children" menu above.</p>
+                <Icon 
+                    id="menu-direction-arrow"
+                    name="arrow up"
+                    size="large"
+                />
+            </div>
+            }
            
            </div> 
         )

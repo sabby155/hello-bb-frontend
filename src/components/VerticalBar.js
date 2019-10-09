@@ -23,10 +23,10 @@ render() {
                 { this.props.currentBaby ?
                     <Responsive as={Segment} minWidth={990}>
                     <Grid reversed='computer vertically'>
-                    <div className="vertical-info-text">You weight was <br/> <span><strong>{this.props.currentBaby.weight}</strong></span> lbs</div>
+                    <div className="vertical-info-text">Your weight was <br/> <span><strong>{this.props.currentBaby.weight}</strong></span> lbs</div>
                     <span className="whale"><Image src={whale} width="40" height="30"></Image></span>
 
-                    <div className="vertical-info-text">You height was <br/> <span><strong>{this.props.currentBaby.weight}</strong></span> in.</div>
+                    <div className="vertical-info-text">Your height was <br/> <span><strong>{this.props.currentBaby.height}</strong></span> in.</div>
                     <span className="cloud"><Image src={cloud} width="40" height="30"></Image></span>
 
                     <div className="vertical-info-text">Your were delivered in <br/><span><strong>{this.props.currentBaby.delivered_in}</strong></span></div>

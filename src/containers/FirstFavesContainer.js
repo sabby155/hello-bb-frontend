@@ -51,7 +51,7 @@ class FirstFavesContainer extends React.Component {
             <Responsive  minWidth={1300}>    
             <Container>
                 <Divider />
-                <Image className="chevron" src={chevron} width="125" height="70"/>
+                <Image className="chevron" src={chevron} width="100" height="50"/>
 
                 {/* <h3>Your Milestones</h3><br></br><br></br> */}
 

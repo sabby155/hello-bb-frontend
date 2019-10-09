@@ -2,11 +2,13 @@ import React from 'react'
 import { Menu, Dropdown} from 'semantic-ui-react'
 import { connect } from 'react-redux'
 import { Link } from "react-router-dom"
+import '../assets/Navbar.css'
 
 
 class Navbar extends React.Component {
      state = {
         activeItem: "",
+
      }
     
     handleItemClick = (e, { name }) => this.setState({ activeItem: name })
@@ -14,6 +16,12 @@ class Navbar extends React.Component {
     handleSelectChange = (event, data) => {
         this.props.setCurrentBaby(data.value)
     }
+
+    // componentDidUpdate(prevProps) {
+    //     if(this.props.currentBaby === null) {
+            
+    //     }
+    // }
   
 
     render() {
@@ -113,6 +121,7 @@ class Navbar extends React.Component {
 }
 
 function mapStateToProps(state) {
+    // console.log('testing baby:',state.currentBaby)
     return {
         currentUser: state.currentUser, 
         currentBaby: state.currentBaby

@@ -51,6 +51,7 @@ class Memory extends React.Component {
                     src={this.props.link} 
                     alt={this.props.caption}
                     onClick={this.handleClick}
+                    
                     />
                     </div>
                     {/* {cloudinary.imageTag(this.props.link, {width: 150, crop: "scale"}).toHtml()} */}

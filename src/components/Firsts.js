@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container, Image, Grid, Form, Input} from 'semantic-ui-react'
+import { Container, Image, Grid, Form} from 'semantic-ui-react'
 import { connect } from 'react-redux'
 import '../assets/Firsts.css'
 import { Icon, Button } from 'semantic-ui-react'
@@ -7,12 +7,13 @@ import { Icon, Button } from 'semantic-ui-react'
 import bear from '../assets/bear-and-stars.png'
 import garland from '../assets/096.png'
 import scissors from '../assets/scissors.svg'
+import PeekABoo from '../assets/peek-a-boo.png'
 
 class Firsts extends React.Component {
 
     state = {
         caption: "Click to view or document a memorable favorite or a first.",
-        link: "https://images.unsplash.com/photo-1558542086-b116634c8dd2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80",
+        link: PeekABoo,
         date: new Date().toLocaleDateString(),
         name: "Select a First <3",
         isClicked: false,
@@ -37,8 +38,8 @@ class Firsts extends React.Component {
         if (this.props.babyMilestones) {
             this.setState({
                 caption: this.props.babyMilestones[4].caption,
-                link: this.props.babyMilestones[4].link,
-                date: this.props.babyMilestones[4].date,
+                link: this.state.link,
+                date: this.props.babyMilestones[4].updated_at.split("").slice(0,10).join(""),
                 name: "First Smile"
             })
         
@@ -50,8 +51,8 @@ class Firsts extends React.Component {
         if (this.props.babyMilestones) {
             this.setState({
                 caption: this.props.babyMilestones[5].caption,
-                link: this.props.babyMilestones[5].link,
-                date: this.props.babyMilestones[5].date,
+                link: this.state.link,
+                date: this.props.babyMilestones[5].updated_at.split("").slice(0,10).join(""),
                 name: "First Laugh"
 
             })
@@ -64,8 +65,8 @@ class Firsts extends React.Component {
         if (this.props.babyMilestones) {
             this.setState({
                 caption: this.props.babyMilestones[1].caption,
-                link: this.props.babyMilestones[1].link,
-                date: this.props.babyMilestones[1].date,
+                link: this.state.link,
+                date: this.props.babyMilestones[1].updated_at.split("").slice(0,10).join(""),
                 name: "First Walk",
             })
         
@@ -77,8 +78,8 @@ class Firsts extends React.Component {
         if (this.props.babyMilestones) {
             this.setState({
                 caption: this.props.babyMilestones[2].caption,
-                link: this.props.babyMilestones[2].link,
-                date: this.props.babyMilestones[2].date,
+                link: this.state.link,
+                date: this.props.babyMilestones[2].updated_at.split("").slice(0,10).join(""),
                 name: "First Solid Food"
             })
             
@@ -90,8 +91,8 @@ class Firsts extends React.Component {
         if (this.props.babyMilestones) {
             this.setState({
                 caption: this.props.babyMilestones[6].caption,
-                link: this.props.babyMilestones[6].link,
-                date: this.props.babyMilestones[6].date,
+                link: this.state.link,
+                date: this.props.babyMilestones[6].updated_at.split("").slice(0,10).join(""),
                 name: "First Crawl"
             })
         
@@ -103,8 +104,8 @@ class Firsts extends React.Component {
         if (this.props.babyMilestones) {
             this.setState({
                 caption: this.props.babyMilestones[3].caption,
-                link: this.props.babyMilestones[3].link,
-                date: this.props.babyMilestones[3].date,
+                link: this.state.link,
+                date: this.props.babyMilestones[3].updated_at.split("").slice(0,10).join(""),
                 name: "First Tooth"
             })
         
@@ -116,8 +117,8 @@ class Firsts extends React.Component {
         if (this.props.babyMilestones) {
             this.setState({
                 caption: this.props.babyMilestones[7].caption,
-                link: this.props.babyMilestones[7].link,
-                date: this.props.babyMilestones[7].date,
+                link: this.state.link,
+                date: this.props.babyMilestones[7].updated_at.split("").slice(0,10).join(""),
                 name: "First Sitting-Up"
             })
         
@@ -129,8 +130,8 @@ class Firsts extends React.Component {
         if (this.props.babyMilestones) {
             this.setState({
                 caption: this.props.babyMilestones[8].caption,
-                link: this.props.babyMilestones[8].link,
-                date: this.props.babyMilestones[8].date,
+                link: this.state.link,
+                date: this.props.babyMilestones[8].updated_at.split("").slice(0,10).join(""),
                 name: "First Outing"
             })
         
@@ -142,8 +143,8 @@ class Firsts extends React.Component {
         if (this.props.babyMilestones) {
             this.setState({
                 caption: this.props.babyMilestones[0].caption,
-                link: this.props.babyMilestones[0].link,
-                date: this.props.babyMilestones[0].date,
+                link: this.state.link,
+                date: this.props.babyMilestones[0].updated_at.split("").slice(0,10).join(""),
                 name: "First Word"
             })
         
@@ -161,7 +162,7 @@ class Firsts extends React.Component {
     }
 
     render() {
-        console.log('hello from firsts!', this.props.selectedMilestone)
+        // console.log('hello from firsts!', this.props.selectedMilestone)
         return (
             <Container className="main-container">  
              <Grid>
@@ -258,7 +259,7 @@ class Firsts extends React.Component {
 }
 
 function mapStateToProps(state) {
-    console.log('new test from firsts!:', state)
+    // console.log('new test from firsts!:', state)
     return {
         currentBaby: state.currentBaby,
         selectedMilestone: state.selectedMilestone
